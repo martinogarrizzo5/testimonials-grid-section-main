@@ -12,6 +12,7 @@
     @include mediaQuery($laptop) {
         display: flex;
         flex-direction: column;
+        gap: 0;
     }
 
     @include mediaQuery($mobile) {
@@ -34,6 +35,10 @@
     &:hover {
         transform: translateY(-0.5rem);
         box-shadow: 0.4rem 0.4rem 0.8rem $LightGray;
+    }
+
+    &:not(:last-of-type) {
+        margin-bottom: 3rem;
     }
 
     &__1 {
