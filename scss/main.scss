@@ -1,0 +1,161 @@
+@import "./mixins";
+@import "./variables";
+@import "./base";
+
+.reviews {
+    padding: 10rem;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+}
+
+.review {
+    box-shadow: 0.2rem 0.2rem 0.5rem $LightGray;
+
+    padding: 3rem;
+    border-radius: 1rem;
+
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+    gap: 1rem 2rem;
+
+    transition: all 0.2s;
+
+    &:hover {
+        transform: translateY(-0.5rem);
+        box-shadow: 0.4rem 0.4rem 0.8rem $LightGray;
+    }
+
+    &__1 {
+        grid-column: 1 / span 2;
+
+        background-color: $ModerateViolet;
+
+        & .review {
+            &__quote {
+                width: 4.5rem;
+                height: 4.5rem;
+
+                transform: scale(2) translate(-4rem, 1rem);
+
+                grid-row: 1 / 2;
+                grid-column: 2 / 3;
+                justify-self: flex-end;
+            }
+
+            &__user {
+                &__name {
+                    color: $White;
+                }
+            }
+            &__title {
+                color: $White;
+                z-index: 1;
+            }
+        }
+    }
+
+    &__2 {
+        background-color: $VeryDarkGrayishBlue;
+
+        & .review {
+            &__user {
+                &__name {
+                    color: $White;
+                }
+            }
+            &__title {
+                color: $White;
+            }
+        }
+    }
+
+    &__3 {
+        background-color: $White;
+
+        & .review {
+            &__user {
+                &__type {
+                    color: $VeryDarkGrayishBlue;
+                }
+            }
+            &__text {
+                color: $VeryDarkGrayishBlue;
+            }
+        }
+    }
+
+    &__4 {
+        grid-column: 2 / span 2;
+        background-color: $VeryDarkBlackishBlue;
+
+        & .review {
+            &__user {
+                &__name {
+                    color: $White;
+                }
+            }
+            &__title {
+                color: $White;
+            }
+        }
+    }
+
+    &__5 {
+        grid-column: -2 / -1;
+        grid-row: 1 / span 2;
+
+        background-color: $White;
+
+        & .review {
+            &__user {
+                &__type {
+                    color: $VeryDarkGrayishBlue;
+                }
+            }
+            &__text {
+                color: $VeryDarkGrayishBlue;
+            }
+        }
+    }
+
+    &__img {
+        border-radius: 50%;
+        width: 4.5rem;
+    }
+
+    &__user {
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+        &__name {
+            font-weight: 600;
+        }
+
+        &__type {
+            color: rgba($LightGray, 0.6);
+        }
+    }
+
+    &__title {
+        grid-column: 1 / -1;
+        font-weight: 600;
+    }
+
+    &__text {
+        grid-column: 1 / -1;
+        color: rgba($LightGray, 0.7);
+        line-height: 1.5;
+    }
+}
+
+.attribution {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
