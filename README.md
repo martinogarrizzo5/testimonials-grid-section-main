@@ -1,5 +1,7 @@
 # Frontend Mentor - Testimonials grid section
 
+[Live Site](https://martinogarrizzo5.github.io/testimonials-grid-section-main/)
+
 ![Design preview for the Testimonials grid section coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
@@ -18,7 +20,7 @@ You can use any tools you like to help you complete the challenge. So if you've 
 
 Your users should be able to:
 
-- View the optimal layout for the site depending on their device's screen size
+-   View the optimal layout for the site depending on their device's screen size
 
 Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
 
