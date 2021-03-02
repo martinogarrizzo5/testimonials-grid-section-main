@@ -7,6 +7,10 @@
 
 html {
     font-size: 62.5%;
+
+    @include mediaQuery($mobile-sm) {
+        font-size: 55%;
+    }
 }
 
 body {

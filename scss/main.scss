@@ -3,23 +3,31 @@
 @import "./base";
 
 .reviews {
-    padding: 10rem;
+    padding: 8rem;
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 3rem;
+
+    @include mediaQuery($laptop) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @include mediaQuery($mobile) {
+        padding: 2rem;
+    }
 }
 
 .review {
     box-shadow: 0.2rem 0.2rem 0.5rem $LightGray;
 
-    padding: 3rem;
+    padding: 4rem;
     border-radius: 1rem;
 
     display: grid;
     grid-template-columns: min-content 1fr;
-    align-items: center;
-    gap: 1rem 2rem;
+    gap: 2rem;
 
     transition: all 0.2s;
 
@@ -43,9 +51,14 @@
                 grid-row: 1 / 2;
                 grid-column: 2 / 3;
                 justify-self: flex-end;
+
+                @include mediaQuery($mobile) {
+                    transform: scale(2) translate(-2rem, 1rem);
+                }
             }
 
             &__user {
+                z-index: 1;
                 &__name {
                     color: $White;
                 }
@@ -124,11 +137,13 @@
     &__img {
         border-radius: 50%;
         width: 4.5rem;
+        align-self: center;
     }
 
     &__user {
         grid-row: 1 / 2;
         grid-column: 2 / 3;
+        align-self: center;
         &__name {
             font-weight: 600;
         }
@@ -154,8 +169,8 @@
     font-size: 1.1rem;
     text-align: center;
     margin-bottom: 1rem;
-}
 
-.attribution a {
-    color: hsl(228, 45%, 44%);
+    & a {
+        color: hsl(228, 45%, 44%);
+    }
 }

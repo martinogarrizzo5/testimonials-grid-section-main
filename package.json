@@ -4,12 +4,17 @@
   "description": "![Design preview for the Testimonials grid section coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass ./scss/main.scss ./css/style.css -w scss"
+    "watch:sass": "node-sass ./scss/main.scss ./css/style.css -w scss",
+    "prefix:css": "postcss ./css/style.css -u autoprefixer -b \"last 10 versions\" -o ./css/style-prefixed.css",
+    "compress:css": "node-sass ./css/style.css ./css/style.css --output-style compressed"
   },
   "keywords": [],
   "author": "Martin Meneghetti",
   "license": "ISC",
   "dependencies": {
-    "node-sass": "^5.0.0"
+    "autoprefixer": "^10.2.4",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.2.6",
+    "postcss-cli": "^8.3.1"
   }
 }
